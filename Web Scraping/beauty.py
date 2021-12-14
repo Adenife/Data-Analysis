@@ -35,8 +35,8 @@ for i in range(2,10,1):
     ratings = soup.select(rating_selector)
 
 
-    # for price, title, rating in zip(prices, titles, ratings):
-    #     print(f"{title['title']} costs {price.string} with a rating of {get_rating(rating)}")
-    with open("books.csv", "a", encoding="utf-8") as book_file:
-        for price, title, rating in zip(prices, titles, ratings):
-            book_file.write(f"{title['title']},{price.string},{get_rating(rating)}\n")
+    for price, title, rating in zip(prices, titles, ratings):
+        print(f"{title['title']} costs {price.string} with a rating of {get_rating(rating)}")
+    # with open("books.csv", "a", encoding="utf-8") as book_file:
+    #     for price, title, rating in zip(prices, titles, ratings):
+    #         book_file.write(f"{title['title']},{price.string},{get_rating(rating)}\n")
